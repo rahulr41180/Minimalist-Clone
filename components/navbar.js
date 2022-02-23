@@ -47,4 +47,4 @@ function navbar()
         </div>
     `
 }
-export {navbar,searchbar};
+// export {navbar,searchbar};
