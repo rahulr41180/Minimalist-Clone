@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+</style>
+</head>
+<body>
+
+<h2>Pagination</h2>
+<p>Responsive pagination with hover effects:</p>
+
+<div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="#">1</a>
+  <a class="active" href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">&raquo;</a>
+</div>
+
+</body>
+</html>
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .modal 
+    {
+        /* border: 1px solid blue; */
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 90vw; /* Full width */
+        height: 50vw; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        padding-top: 60px;
+    }
+
+    .modal-content {
+        border: 1px solid;
+        padding: 1vw;
+      background-color: #fefefe;
+      margin: 1vw auto 1vw auto; /* 5% from the top, 15% from the bottom and centered */
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+    }
+    .HeadingCloseBox
+    {
+        border: 1px solid;
+        width: 99%;
+        margin: auto;
+        padding: .2vw;
+        position: relative;
+        display: flex;
+    }
+    .animate 
+    {
+          -webkit-animation: animatezoom 0.6s;
+          animation: animatezoom 0.6s
+    }
+
+    @-webkit-keyframes animatezoom 
+    {
+      from {-webkit-transform: scale(0)} 
+      to {-webkit-transform: scale(1)}
+    }
+
+    @keyframes animatezoom 
+    {
+        from {transform: scale(0)} 
+        to {transform: scale(1)}
+    }
+    </style>
+</head>
+<body>
+    <button id = "open"></button>
+    <div id = "id01" class = "modal">
+        <div class = "modal-content animate">
+            <div class = "HeadingCloseBox">
+                <div class = "HeadingBox">Some Product Details</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    let openbutton = document.querySelector("#open");
+    openbutton.style = "width:auto";
+    openbutton.innerHTML = "Open";
+    openbutton.addEventListener("click",function()
+    {
+        BoxOpen();
+    })
+    function BoxOpen()
+    {
+        console.log(1);
+        let opendiv = document.querySelector("#id01");
+        opendiv.style.display = "block"
+    }
+</script>
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <style>
+        #PriceBox
+{
+    border: 1px solid;
+    width: 95.2%;
+    margin: auto;
+    padding: .2vw;
+    display: flex;
+    grid-gap: .4vw;
+}
+#PriceFilterBox
+{
+    border: 1px solid;
+    width: 92.5%;
+    margin: auto;
+    height: 10.5vw;
+}
+#Price
+{
+    border: 1px solid;
+    width: 86%;
+    height: 1.65vw;
+    padding: .2vw;
+    display: flex;
+    align-items: center;
+    font-size: 1.4vw;
+    font-weight: bold;
+}
+#PriceUpDownArrowBox
+{
+    border: 1px solid;
+    width: 12%;
+    height: 2.1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;    
+}
+#PriceFieldset
+{
+    border: 1px solid blue;
+    height: 9vw;
+    overflow: auto;
+}
+.PriceInput
+{
+    border: 1px solid;
+    /* width: 10%; */
+    /* height: 2vw; */
+    padding: .5vw;
+}
+.Pricelabel
+{
+    border: 0px solid;
+    font-size: 1.1vw;
+}
+    </style>
+</head>
+<body>
+    <div id = "PriceBox">
+        <div id = "PriceUpDownArrowBox"><i class="arrow up"></i></div>
+        <div id = "Price">PRICE</div>
+    </div>
+    <div id = "PriceFilterBox">
+        <fieldset id = "PriceFieldset">
+            <legend>Price</legend>
+            <div id = "MinAndMaxBox">
+                <input id = "Minimum" type="text" value = "250">
+                -
+                <input id = "Maximum" type="text" value = "600">
+            </div>
+            <div class = "rangecontainer">
+                <div class = "slider-tracker"></div>
+                <input oninput="slideOne()" type="range" min = 250 max = 800 value = 250 id = "slider-1">
+                <input oninput="slideTwo()" type="range" min = 250 max = 800 value = 650 id = "slider-2">
+            </div>
+        </fieldset>
+    </div>
+</body>
+</html> --> -->
