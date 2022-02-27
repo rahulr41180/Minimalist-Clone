@@ -905,6 +905,7 @@ input[type="range"]:active::-webkit-slider-thumb{
     margin: auto;
     display: flex;
 }
+
 .GridImage
 {
     border: 1px solid;
@@ -971,13 +972,13 @@ input[type="range"]:active::-webkit-slider-thumb{
     width: fit-content;
     font-size: 1.2vw;
     display: flex;
+    margin-left: .4vw;
     align-items: center;
 }
 .StrickPriceBox
 {
     border: 1px solid;
-    width: 40%;
-    margin-left: .4vw;
+    width: fit-content;
     display: flex;
     font-size: 1.2vw;
     align-items: center;

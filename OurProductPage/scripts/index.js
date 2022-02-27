@@ -24,6 +24,15 @@ function closeSearch()
     document.querySelector("#NavbarContainer").style.zIndex = "1";
     document.querySelector("#myOverlay").style.display = "none";
 }
+function GoToHomePage()
+{
+    window.location.href = "/Home/Home.html"
+}
+function MinimalistAddToCartPage()
+{
+    console.log(1);
+    window.location.href = "/Cart/cart.html";
+}
 // --------------------------------------------Navbar End--------------------------------------------------
 
 // --------------------------------------------Second Search Input Start ----------------------------------------
@@ -2847,7 +2856,7 @@ function AppendData(Data,count)
         ViewIcon.append(ViewImage);
         ImageBox.append(GridImage);
         StarsBox.append(checked1,checked2,checked3,checked4,checked5,reviews);
-        PriceStrickPriceBox.append(PriceBox,StrickPriceBox);
+        PriceStrickPriceBox.append(StrickPriceBox,PriceBox);
         AddToCartQunatityBox.append(DecreaseBox,ShowQuantityBox,IncreaseBox,AddToCartButtonImage);
         AddToCartButtonImage.append(AddToCartIcon,AddToCartButton)
         AddToCartIcon.append(AddToImage);
@@ -2918,6 +2927,7 @@ function AppendData(Data,count)
     {
         RecentalyViewArray.push(element);
         localStorage.setItem("RecentalyViewProduct",JSON.stringify(RecentalyViewArray));
+        // window.location.href = "index.html"
     }
     function AddToCartSave(element,index)
     {
@@ -3313,7 +3323,7 @@ function slideArray(data,count)
         ViewIcon.append(ViewImage);
         ImageBox.append(GridImage);
         StarsBox.append(checked1,checked2,checked3,checked4,checked5,reviews);
-        PriceStrickPriceBox.append(PriceBox,StrickPriceBox);
+        PriceStrickPriceBox.append(StrickPriceBox,PriceBox);
         // AddToCartQunatityBox.append(DecreaseBox,ShowQuantityBox,IncreaseBox);
         // AddToCartButtonImage.append(AddToCartIcon,AddToCartButton)
         // AddToCartIcon.append(AddToImage);
