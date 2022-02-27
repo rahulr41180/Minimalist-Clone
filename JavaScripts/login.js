@@ -11,6 +11,29 @@ function closeSearch()
 }
 
 
+var LoginName = JSON.parse(localStorage.getItem("MinimalistLoginName"))||[];
+
+if(LoginName.length == 0)
+{
+    console.log(1);
+    LoginName.push("Login");
+    LoginName.push("Login");
+}
+var LogOut = JSON.parse(localStorage.getItem("MinimalistLogOut"))||[];
+if(LogOut.length == 0)
+{
+    console.log(1);
+    LogOut.push("SignUp");
+    LogOut.push("SignUp");
+}
+var show = JSON.parse(localStorage.getItem("MinimalistShow"))||[];
+if(show.length == 0)
+{
+    console.log(1);
+    show.push("show");
+    show.push("show");
+}
+
 function OurProductPage()
 {
     window.location.href = "ourproduct.html";
@@ -54,31 +77,6 @@ if((Showing[Showing.length-1] == "NotShow"))
 else
 {
     document.querySelector("form").addEventListener("submit",LogIn);
-
-
-    var LoginName = JSON.parse(localStorage.getItem("MinimalistLoginName"))||[];
-
-    if(LoginName.length == 0)
-    {
-        console.log(1);
-        LoginName.push("Login");
-        LoginName.push("Login");
-    }
-
-    var LogOut = JSON.parse(localStorage.getItem("MinimalistLogOut"))||[];
-    if(LogOut.length == 0)
-    {
-        console.log(1);
-        LogOut.push("SignUp");
-        LogOut.push("SignUp");
-    }
-    var show = JSON.parse(localStorage.getItem("MinimalistShow"))||[];
-    if(show.length == 0)
-    {
-        console.log(1);
-        show.push("show");
-        show.push("show");
-    }
     localStorage.setItem("MinimalistLoginName",JSON.stringify(LoginName));
     localStorage.setItem("MinimalistLogOut",JSON.stringify(LogOut));
     localStorage.setItem("MinimalistShow",JSON.stringify(show));
